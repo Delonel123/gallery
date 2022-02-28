@@ -26,6 +26,7 @@ const ImagesList = () => {
     }
    
     useEffect(() =>{
+        // Need all Image for filter by albumID
         const fetchAllData = async () =>{
             const url = `http://jsonplaceholder.typicode.com/photos`
             const response = await fetch(url, {
