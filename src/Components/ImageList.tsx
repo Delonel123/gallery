@@ -26,7 +26,7 @@ const ImagesList = () => {
     }
    
     useEffect(() =>{
-        // Need all Image for filter by albumID
+        // Need all Image data for filter by albumID
         const fetchAllData = async () =>{
             const url = `http://jsonplaceholder.typicode.com/photos`
             const response = await fetch(url, {
@@ -39,12 +39,12 @@ const ImagesList = () => {
                 console.log('Error fetching data from API')
             }
             const allImage:image[] = await response.json()
+            // Function for find all albomID
             almobCountsCreater({albumIds,allImage,setAlmunIds})
             setAllImage([])
         }
         fetchAllData()
     },[])
-    console.log(albumIds)
     useEffect(() => {
         dispatch(fetchImage({ _page: currentPage, limit: perPage }))
     }, [currentPage])
