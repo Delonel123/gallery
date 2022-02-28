@@ -1,0 +1,17 @@
+.delete__image{
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: flex-start;
+}
+.onMouse{
+    opacity: .6;
+}
+.image{
+    cursor: pointer;
+}
+.deleteIcon{
+    position: absolute !important;
+    left: 0;
+}
